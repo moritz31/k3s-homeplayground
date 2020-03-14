@@ -71,10 +71,10 @@ resource "kubernetes_ingress" "mqtt" {
     }
 }
 
-module "pihole" {
-  source = "./modules/pihole"
-}
-
-//module "helm" {
-//  source = "./modules/helm"
+//module "pihole" {
+//   source = "./modules/pihole"
 //}
+
+module "keepalived" {
+    source = "./modules/keepalived"
+}
