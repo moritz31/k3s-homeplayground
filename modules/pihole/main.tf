@@ -14,6 +14,11 @@ resource "helm_release" "pihole" {
     }
 
     set {
+        name = "persistentVolumeClaim.storageClass"
+        value = "nfs-client"
+    }
+
+    set {
         name = "ingress.enabled"
         value = "true"
     }
